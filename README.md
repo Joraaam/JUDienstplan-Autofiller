@@ -20,16 +20,6 @@ Alle Formeln, Formatierungen und Dropdowns der Vorlage bleiben erhalten.
 | S/L (HC) | wie S, Bemerkung "Training" |
 | DGR | nur "DGR" in den Bemerkungen, keine Zeiten |
 
-## Auf Vercel deployen
-1. Repo auf GitHub pushen.
-2. Auf [vercel.com/new](https://vercel.com/new) das Repo importieren. Framework Preset: **Other**, keine Build-Einstellungen nötig.
-3. Deploy. `vercel.json` leitet `/api/*` an die Python-Funktion `api/index.py`, `public/` wird als statische Seite ausgeliefert.
-
-Hinweise:
-- Vercel erlaubt max. **4,5 MB pro Anfrage**. Darum wird jede Excel-Datei einzeln verarbeitet (Dienstplan-PDF und eine Excel je Anfrage, die App begrenzt auf 4 MB).
-- Die API ist zustandslos, es wird nichts auf dem Server gespeichert. Die Dateien werden aber zur Verarbeitung an die Vercel-Funktion gesendet. Enthalten sie Personaldaten, die Seite z.B. mit **Vercel Authentication / Passwortschutz** (Project Settings > Deployment Protection) absichern.
-- Die Funktion braucht die Python-Pakete aus `requirements.txt` (Flask, pdfplumber).
-
 ## Lokal ausführen
 ```bash
 pip install -r requirements.txt
