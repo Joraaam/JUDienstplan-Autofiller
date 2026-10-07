@@ -1,0 +1,1 @@
+IF(A4="","",IF(IF(D4&lt;E4,E4-D4,IF(E4="",0,E4-D4+1))+IF(F4&lt;G4,G4-F4,IF(G4="",0,G4-F4+1))-H4&gt;0,IF(D4&lt;E4,E4-D4,IF(E4="",0,E4-D4+1))+IF(F4&lt;G4,G4-F4,IF(G4="",0,G4-F4+1))-H4,0))
